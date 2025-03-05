@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./Documentation.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open Sans:ital,wght@0,400;0,800;1,700&display=swap"
+    />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h3>Menu</h3>
+      <a href="#contribute">How to Contribute</a>
+      <a href="#use-it">How to Use It</a>
+      <a href="#download-unzip">Download and Unzip</a>
+      <a href="#blueprint-steps">Blueprint Steps</a>
+      <a href="#verify-plugin">Verify Plugin</a>
+      <a href="#functions">Functions Provided</a>
+      <a href="#Transverse">Transverse functions</a>
+      <a href="#hellomoon-api">HelloMoon API</a>
+      <a href="#moralis-api">Moralis API</a>
+      <a href="#support">Support</a>
+    </div>
+    
+    <div class="mainen">
+      <h1 id="contribute">HOW TO Contribute to the open source code:</h1>
+
+      <p>Here is the open source code of the plugin: <a href="https://github.com/ThugzLabs/Thugz-Solana-for-Unreal-Engine-5.3-SOURCE-PROJECT/tree/main">https://github.com/ThugzLabs/Thugz-Solana-for-Unreal-Engine-5.3-SOURCE-PROJECT/tree/main</a></p>
+      
+      <p>It is designed for the 5.3 version of Unreal Engine. If you want to contribute, please create a branch from the develop branch and code what you want, then merge to develop when you have finished.</p>
+      
+      <p>You can create a pull request to merge your code into the main branch if you believe your code improves the plugin. Your code will then be reviewed by our team, and if approved, it will be merged into the main branch. Don't forget to comment on your code and indicate your contribution.</p>
+      
+      <h1 id="use-it">HOW TO USE IT</h1>
+      
+      <p><strong>If you downloaded the plugin from the Unreal Engine marketplace, install it from the Epic Games launcher on the engine version of your choice and proceed to step 3</strong></p>
+      
+      <img src="./Public/Plugin/image.png" alt="Plugin installation step 1">
+      
+      <p>If you get the packaged plugin from the GitHub repo, follow these steps:</p>
+      
+      <h2 id="download-unzip">1/ Download the last package and unzip</h2>
+      
+      <ul>
+          <li>Download the last release of your engine version from our repository:
+              <ul>
+                  <li>Unreal Engine Version 5.4: <a href="https://github.com/ThugzLabs/Thugz-BC-Plugin-Packaged-for-UE5.4/releases/tag/6.0">Release V6.0 for UE5.4</a></li>
+                  <li>Unreal Engine version 5.3: <a href="https://github.com/ThugzLabs/Thugz-BC-Plugin-Packaged-for-UE5.3/releases/tag/6">Release Solana Wallet management</a></li>
+              </ul>
+          </li>
+          <li>Create a "Plugins" directory inside your project directory and unzip the packaged plugin downloaded in your new "Plugins" directory:</li>
+      </ul>
+      
+      <img src="./Public/Plugin/Untitled.png" alt="Unzip plugin into Plugins directory">
+      
+      <h2 id="blueprint-steps">2/ If your project is a blueprint only, follow these steps (else, skip this step and go to step 3)</h2>
+      
+      <p>Create an empty C++ class to convert it into a C++ project:</p>
+      
+      <img src="./Public/Plugin/Untitled (1).png" alt="Create empty C++ class step 1">
+      <img src="./Public/Plugin/Untitled (2).png" alt="Create empty C++ class step 2">
+      <img src="./Public/Plugin/Untitled (3).png" alt="Create empty C++ class step 3">
+      
+      <p>Wait for the code to be added to the project and then accept the popup:</p>
+      
+      <img src="./Public/Plugin/Untitled (4).png" alt="Popup to accept the code addition">
+      
+      <p>Then click no:</p>
+      
+      <img src="./Public/Plugin/Untitled (5).png" alt="Click no on popup">
+      
+      <p>Then exit from the Unreal Editor and go to your project directory. Find your .uproject file and generate Visual Studio files:</p>
+      
+      <img src="./Public/Plugin/Untitled (6).png" alt="Generate Visual Studio files">
+      
+      <p>Wait for the generation of the files. Once it’s finished, launch your project (double-click the .uproject file). Click Yes here:</p>
+      
+      <img src="./Public/Plugin/Untitled (7).png" alt="Click yes to launch project">
+      
+      <p>And wait until your project is loaded (it can take several minutes).</p>
+      
+      <h2 id="verify-plugin">3/ Verify the plugin</h2>
+      
+      <p>Launch your project and go to the plugin panel to verify that the Thugz Plugin is correctly activated. If not, activate it and restart the project.</p>
+      
+      <img src="./Public/Plugin/Untitled (8).png" alt="Activate Thugz Plugin">
+      
+      <p>We provide a widget test that can be used to understand how the plugin works. It is commented to help you understand how you can implement its features inside your game.</p>
+      <img src="./Public/Plugin/Untitled (9).png" alt="widget Thugz Plugin">
+
+        <h2 id="functions"><strong>4/ Functions provided by the Plugins.</strong></h2>
+
+        <h4 id="Transverse">Transverse Function that can be used for any Blockchain or any API</h3>
+        <ul>
+            <li><strong>GetLastJsonResponse</strong>: Retrieve the JSON response of the last API call made by an API request (like <strong>MakeHelloMoonAPIRequest, MoralisAPIRequest or…</strong>)
+                <ul>
+                    <li>Input: None</li>
+                    <li>Output:
+                        <ul>
+                            <li>JSON: The String formatted as JSON which contains the response of the API</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br>
+            <li><strong>FString GetLastTokenJsonResponse()</strong>: Another function to retrieve the JSON response of the last API call made by an API request which is specific for the native token balance: <strong>HelloMoonRequestForTokenBalance</strong> and <strong>MakeMoraliseRequestForSOLBalance</strong>
+                <ul>
+                    <li>Input: None</li>
+                    <li>Output:
+                        <ul>
+                            <li>JSON: The String formatted as JSON which contains the response of the API</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h4>The following function is a set to retrieve the Image of a NFT (whatever is the Blockchain: tested with Solana and Ethereum)</h3>
+        <ul>
+            <li><strong>MakeURIRequest(const FString&amp; URL)</strong>: HTTP request which will retrieve the JSON from the GET URI:
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>String: The URI you want to retrieve the MetaData</li>
+                        </ul>
+                    </li>
+                    <li>Output:
+                        <ul>
+                            <li>JSON: The String formatted as JSON which contains the MetaData response of the URI</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br>
+            <li><strong>ParseImageURL(const FString&amp; JsonString, FString&amp; OutImageURL)</strong>: This request comes just after the <strong>MakeURIRequest</strong>. It parses the JSON in entry to retrieve the Image URL.
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>String: The JSON you want to retrieve the URL Image (The response of MakeURIRequest)</li>
+                        </ul>
+                    </li>
+                    <li>Output:
+                        <ul>
+                            <li>String: The URL String of the image</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br>
+            <li><strong>DownloadImageAndCreateTexture(const FString&amp; URL, UTexture2D*&amp; OutTexture)</strong>: This request comes just after the <strong>ParseImageURL</strong>. It downloads the image in the URL and stores it inside a 2D texture to be used in Unreal Engine.
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>String: The URL string of the image you want to download (The response of ParseImageURL)</li>
+                        </ul>
+                    </li>
+                    <li>Output:
+                        <ul>
+                            <li>2DTexture: The Image</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h4>Function for SOLANA Blockchain which does not require any API</h3>
+        <ul>
+            <li><strong>GenerateSolanaKeyPair(FString&amp; OutPublicKey, FString&amp; OutPrivateKey)</strong>: This function uses the libsodium library, which employs a cryptographic mechanism based on the Ed25519 elliptic curve. It will generate a new key pair: a private key and a public key, in hexadecimal format. The public key will correspond to the address of the created account, and the private key will be its access code. The public key format needs to be converted to match the commonly used formatting (see the encodeBase58 function):
+                <ul>
+                    <li>Input: None</li>
+                    <li>Output:
+                        <ul>
+                            <li>String: Private Key of the Solana account created in hexadecimal</li>
+                            <li>String: Public Key of the Solana account created in hexadecimal</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br>
+            <li><strong>FString EncodeBase58(const TArray&lt;uint8&gt;&amp; Data)</strong>: This function takes a byte array (binary data) and converts it into a Base58 string. This encoding is used to make the data more human-readable and avoid confusing characters like "0", "O", "l", and "I". Here we use this function after <strong>GenerateSolanaKeyPair</strong> to encode the public key of the account created
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>Array of Int: The Hexadecimal key you want to encode (The public key retrieved by the <strong>GenerateSolanaKeyPair</strong> function)</li>
+                        </ul>
+                    </li>
+                    <li>Output:
+                        <ul>
+                            <li>String: the Solana public address encoded in Base58</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br>
+            <li><strong>FString GetSolanaAddressFromPrivateKey(const FString&amp; PrivateKey, FString&amp; PublicKeyHex)</strong>: This function retrieves the public Solana address directly formatted in base58 (the address used by the Solana Blockchain and tools) using the private key.
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>String: The private key of your account</li>
+                        </ul>
+                    </li>
+                    <li>Output:
+                        <ul>
+                            <li>String: the public address of your account (the one formatted in base58, the one you want)</li>
+                            <li>String: The public key in Hexadecimal</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h4 id="hellomoon-api">Function using HelloMoon API for SOLANA Blockchain</h3>
+        <ul>
+            <li><strong>MakeHelloMoonAPIRequest</strong>: This function makes an API call using Solana HelloMoon API to query the NFTs owned by the Wallet account provided as input. This function must use the transverse function: <strong>GetLastJsonResponse</strong> to retrieve the JSON response inside a string variable. The program must wait for the responses to arrive from the URL so don’t hesitate to put a delay between the two functions (see our widget example code)
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>Account: The public key of the wallet account to query</li>
+                            <li>Barear: The HelloMoon API to use for the query</li>
+                        </ul>
+                    </li>
+                    <li>Output: None</li>
+                </ul>
+            </li><br>
+            <li><strong>ConvertSOLJSONtoStruct</strong>: Takes a String in a JSON format as input and converts it inside an Unreal Engine Structure. It works only with a JSON provided by the <strong>MakeHelloMoonAPIRequest</strong>
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>JSON: The String formatted as JSON</li>
+                        </ul>
+                    </li>
+                    <li>Output:
+                        <ul>
+                            <li>Struct: The structure with the JSON Value formatted in the structure value. This structure will be split into a table that will contain as many entries as NFTs owned.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br>
+            <li><strong>HelloMoonRequestForTokenBalance</strong>: This function makes an API call using Solana HelloMoon API to query the Solana Balance of a Solana account provided as input
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>Account: The public key of the wallet account to query</li>
+                            <li>API Key: The HelloMoon API key to use for the query (barear)</li>
+                        </ul>
+                    </li>
+                    <li>Output:
+                        <ul>
+                            <li>String: The JSON response of the API</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br>
+            <li><strong>GetTokenBalanceFromJsonHelloMoon</strong>: Takes a String in a JSON format as input and converts it into a UE double variable. The JSON String must be the one retrieved by the <strong>HelloMoonRequestForTokenBalance</strong>
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>JSON: The String formatted as JSON</li>
+                        </ul>
+                    </li>
+                    <li>Output:
+                        <ul>
+                            <li>Double: The Solana Balance of the account inside the JSON</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h4 id="moralis-api">Function using MORALIS API for SOLANA Blockchain</h3>
+        <ul>
+            <li><strong>MakeMoraliseRequestForSOLBalance</strong>: This function makes an API call using Moralis API to query the Solana Balance of a Solana account provided as input
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>Account: The public key of the wallet account to query</li>
+                            <li>API Key: The HelloMoon API key to use for the query (barear)</li>
+                        </ul>
+                    </li>
+                    <li>Output:
+                        <ul>
+                            <li>String: The JSON response of the API</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br>
+            <li><strong>GetTokenBalanceFromJsonMoralis</strong>: Takes a String in a JSON format as input and converts it into a UE double variable. The JSON String must be the one retrieved by the <strong>MakeMoraliseRequestForSOLBalance</strong>
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>JSON: The String formatted as JSON</li>
+                        </ul>
+                    </li>
+                    <li>Output:
+                        <ul>
+                            <li>Double: The Solana Balance of the account inside the JSON</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h4>Function using MORALIS API for EVM Blockchain</h3>
+        <ul>
+            <li><strong>MoralisAPIRequest</strong>: This function makes an API call using EVM Moralis API to query the NFTs owned by the Wallet account provided as input. The Blockchain queried is EVM. This function must use <strong>GetLastJsonResponse</strong> to retrieve the JSON response inside a variable. The program must wait for the responses to arrive from the URL so don’t hesitate to put a delay between the two functions (see our widget example code)
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>Account: The public key of the wallet account to query</li>
+                            <li>API Key: The Moralis API to use for the query</li>
+                            <li>Blockchain: The Blockchain of the account. For the moment, only eth and polygon have been tested (but other EVM chains should work)</li>
+                        </ul>
+                    </li>
+                    <li>Output: None</li>
+                </ul>
+            </li><br>
+            <li><strong>ConvertEVMJSONtoStruct</strong>: Takes a String in a JSON format as input and converts it inside an Unreal Engine Structure. It works only with a JSON provided by the <strong>MoralisAPIRequest</strong>
+                <ul>
+                    <li>Input:
+                        <ul>
+                            <li>JSON: The String formatted as JSON</li>
+                        </ul>
+                    </li>
+                    <li>Output:
+                        <ul>
+                            <li>Struct: The structure with the JSON Value formatted in the structure value. This structure will be split into a table that will contain as many entries as NFTs owned.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+        <p><strong>If you want to use the HelloMoon API, don't forget to put a HelloMoon API bearer in order to test our plugin:</strong> <a href="https://www.hellomoon.io/developers">https://www.hellomoon.io/developers</a></p>
+
+<img src="./Public/Plugin/Untitled (10).png" alt="HelloMoon API Bearer Example">
+
+<p>This Bearer can be retrieved here: <a href="https://www.hellomoon.io/developers">https://www.hellomoon.io/developers</a></p>
+
+<p><strong>If you want to use the Moralis API, don’t forget to put the API keys:</strong> <a href="https://moralis.io/">https://moralis.io/</a></p>
+
+<img src="./Public/Plugin/Untitled (11).png" alt="Moralis API Key Example">
+
+<p id="support">For any support, join us on discord: <a href="https://discord.gg/thugz-life-889994637215932416">https://discord.gg/thugz-life-889994637215932416</a></p>
+
+<p>Follow us on X: <a href="https://twitter.com/Thugz_NFT">https://twitter.com/Thugz_NFT</a> and <a href="https://twitter.com/War_Thugz">https://twitter.com/War_Thugz</a> and our GitHub: <a href="https://github.com/ThugzLabs">Thugz Labs (github.com)</a></p>
+
+    </div>
+</body>
+</html>

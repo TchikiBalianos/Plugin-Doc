@@ -1,0 +1,85 @@
+.paragraphe{
+	font-size:20px;
+}
+@media screen and (max-width:1108px) {
+  .paragraphe {font-size: 10px;}
+}
+
+
+.titre{
+	font-size:40px;
+  text-align: center;
+}
+@media screen and (min-width:500px) and (max-width:1108px) {
+  .titre {font-size: 25px; align-content: center;}
+}
+@media screen and (max-width:500px) {
+  .titre {font-size: 10px; align-content: center;}
+}
+
+.title{
+	font-size:40px;
+  text-align: center;
+}
+@media screen and (min-width:500px) and (max-width:1108px) {
+  .title {font-size: 25px; align-content: center;}
+}
+@media screen and (max-width:500px) {
+  .title {font-size: 10px; align-content: center;}
+}
+
+
+
+
+.header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  align-content: center;
+
+}
+.header img{
+	width:100%;
+	height: auto;
+}
+.Header-Text{
+  left:5%;
+  position: relative;
+  text-align: justify;
+  font-size: 17px;
+  width: 90%;
+}
+@media screen and (max-width:500px) {
+  .Header-Text {width:90%;}
+}
+
+
+.mainfr {
+  background-color: #000000;
+  width: 100%;
+  height:auto;
+  overflow: hidden;
+  font-size: var(--font-size-11xl);
+  color: var(--color-white);
+  font-family: var(--font-open-sans);
+}
+
+.mainen {
+  background-color: #000000;
+  width: 100%;
+  height:auto;
+  overflow: hidden;
+  font-size: var(--font-size-11xl);
+  color: var(--color-white);
+  font-family: var(--font-open-sans);
+}
+
+.centre{
+  text-align: center;
+}
+
+.center{
+  text-align: center;
+}
+
